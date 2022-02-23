@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>鼠标平滑移动</title>
+	</head>
+<style>
+.js-cursor {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+.js-cursor.is-activate {
+  display: block;
+}
+.js-cursor .cursor-dot,
+.js-cursor .cursor-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+  visibility: hidden;
+}
+.is-hover .js-cursor .cursor-dot,
+.is-hover .js-cursor .cursor-circle {
+  visibility: visible;
+}
+.js-cursor .cursor-dot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+}
+.js-cursor .cursor-circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #ad9d8f;
+  opacity: 0.4;
+}
+@media only screen and (max-width: 767px) {
+  .js-cursor .cursor-circle {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+}
+</style>
+<body style="background: #fff;width: 100%; height: 800px;margin: 0;padding: 0;">
+	<div class="cursor js-cursor">
+		<div class="cursor-circle" data-cursor-el="circle"></div>
+		<div class="cursor-dot" data-cursor-el="dot"></div>
+	</div>	
+</body>
+<script src="js/bundle.js"></script>
+</html>
