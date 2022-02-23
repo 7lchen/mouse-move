@@ -3,4 +3,4 @@
 <p>效果1</p>
 <img src="image/1.gif">
 <p>效果2</p>
-<img src="image/2.jpg">
+<img src="image/3.jpg">
